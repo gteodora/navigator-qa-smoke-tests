@@ -5,12 +5,12 @@ from utils.driver_factory import get_driver
 
 @pytest.fixture
 def driver():
-    driver = get_driver("chrome")  # Initialize Chrome WebDriver
+    driver = get_driver("chrome")  
     driver.get("https://www.navigator.ba")
     yield driver
     driver.quit()
 
 def test_homepage_loads(driver):
     homepage = HomePage(driver)
-    homepage.check_homepage_title()  # Custom method from HomePage
-    assert "Navigator" in driver.title  # Check that title contains 'Navigator'
+    homepage.check_homepage_title() 
+    assert "Navigator" in driver.title 
