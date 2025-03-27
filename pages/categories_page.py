@@ -7,7 +7,8 @@ class CategoriesPage:
         self.driver = driver
         # Locator for the categories section
         self.categories_list = (By.CSS_SELECTOR, "ul.menu_content_list.categories")  
-        self.category_items = (By.CSS_SELECTOR, "li.list-item") 
+        self.category_items = (By.CSS_SELECTOR, "li.list-item")
+        self.category_links = (By.CSS_SELECTOR, "li.ember-view.list-item a")  
 
     def wait_for_categories_to_load(self):
         """
@@ -23,6 +24,7 @@ class CategoriesPage:
         """
         return self.driver.find_elements(*self.category_items)
 
+
     def click_category(self, category_name):
         """
         Click on a category by its name
@@ -33,4 +35,4 @@ class CategoriesPage:
                 category.click()
                 break
 
-    
+

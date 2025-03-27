@@ -54,4 +54,4 @@ def test_click_narodno_pozoriste(driver):
 
         # Verify that the title has changed
         assert "Narodno pozorište" in driver.title 
-    
+    ''' This tests needs improvement, so it is not hardcoded.'''
